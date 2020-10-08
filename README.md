@@ -1,0 +1,2 @@
+# SudokuKit
+Sudoku solving kit
