@@ -1,7 +1,6 @@
 import time
 import pyautogui
 
-#from Digit_recognize.digit_recognize_testing import DigitRecognizerTesting
 from Digit_recognize.DigitRecognizerBoard import DigitRecognizerBoard
 from Sudoku_solver.SudokuSolver import SudokuSolver
 from Sudoku_clicker.SudokuClicker import SudokuClicker
@@ -11,7 +10,8 @@ class SudokuKit:
     def take_screenshot(self):
         time.sleep(1.8)
         im = pyautogui.screenshot(region=(362, 240, 500, 498))
-        im.save(r'C:\Users\Svilen\Desktop\Untitled Project\Sudoku kit\scr.png')
+        #TODO take screenshot of whole screen and find board automatically
+        im.save('scr.png')
     
     def solve_from_picture(self, pic_name, fill_solved = False):
         container, empty_positions = DigitRecognizerBoard().get_numbers(pic_name)
